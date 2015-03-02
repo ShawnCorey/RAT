@@ -1,4 +1,4 @@
-package com.example.shawn.rat;
+package com.score.rat;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

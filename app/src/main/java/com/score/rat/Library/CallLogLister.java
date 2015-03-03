@@ -4,7 +4,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
 import android.util.Log;
-import android.content.ContentResolver;
 
 import com.score.rat.MainActivity;
 

